@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bombay Stock Exchange Historical Returns</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Bombay Stock Exchange Historical Returns">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Bombay Stock Exchange Historical Returns</h1>
+    <h2>A tool to investiage historical returns on BSE Index</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What is Bombay Stock Exchange?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Old Stock Market in Asia. Located in Mumbai.</li>
+<li>We are going to track BSE 30 Index, an index made of 30 well established
+companies listed on BSE.</li>
+<li>Data available at [[<a href="http://www.bseindia.com/indices/indexarchivedata.aspx%5D">http://www.bseindia.com/indices/indexarchivedata.aspx]</a>]</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Most experts in economics say that stock market is a random process which is mathematically intractable.</li>
+<li>In general, day to day movements are not predictable. </li>
+<li>On the other hand, stock market long term movements can be predicted and are more an indicator of developing wealth of a country. It will be useful to investigate whether simply following the stock index results in long term profilts.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The dataset contains 8185 days of stock market movement from April 1979 onwards.</p>
+
+<pre><code class="r">url &lt;- getURL(&quot;https://raw.githubusercontent.com/autodidact/DataProductShiny/master/data/bse30.csv&quot;,encoding=&quot;UTF-8&quot;)
+data &lt;- read.csv(text=url)
+data$Date &lt;- as.Date(data$Date,format=&quot;%e-%B-%Y&quot;)
+</code></pre>
+
+<pre><code class="r">plot(data$Date, data$Close)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shiny Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The purpose of the application is how much money one would have made if we simply invested in the stocks in the BSE 30 Index. That might be a dumb strategy, but thats the idea.</li>
+<li>You can chose a starting date and investment interval. We assume units of 100 are invested at regular intervals.</li>
+<li>We get a plot of stock movement as well as the total invesment vs current value of the portfolio.</li>
+<li>Go give it a try at <a href="https://autodidact.shinyapps.io/shiny_stocks_india/">https://autodidact.shinyapps.io/shiny_stocks_india/</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What is Bombay Stock Exchange?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Dataset'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shiny Application'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
