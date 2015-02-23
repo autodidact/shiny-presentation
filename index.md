@@ -53,5 +53,3 @@ plot(data$Date, data$Close)
 * You can chose a starting date and investment interval. We assume units of 100 are invested at regular intervals.
 * We get a plot of stock movement as well as the total invesment vs current value of the portfolio.
 * Go give it a try at https://autodidact.shinyapps.io/shiny_stocks_india/
-
---- .class #id 
