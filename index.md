@@ -13,18 +13,21 @@ knit        : slidify::knit2slides
 
 ## What is Bombay Stock Exchange?
 
-1. Old Stock Market in Asia. Located in Mumbai.
+1. Oldest Stock Market in Asia. Located in Mumbai. Established in late 1800s.
+2. A stock market index is a used to capture the overall stock market performance. Usually by taking the large companies and summing their share prices weighted by the market captilization.
 2. We are going to track BSE 30 Index, an index made of 30 well established
-companies listed on BSE.
-3. Data available at [[http://www.bseindia.com/indices/indexarchivedata.aspx]]
+Indian companies listed on BSE. The index keeps changing to reflect the current
+market captilizations.
+3. Data available at http://www.bseindia.com/indices/indexarchivedata.aspx.
 
 --- .class #id 
 
 ## Why?
 
 1. Most experts in economics say that stock market is a random process which is mathematically intractable.
-2. In general, day to day movements are not predictable. 
+2. In general, day to day movements are not predictable, or are too fast to be useful to most human traders.
 3. On the other hand, stock market long term movements can be predicted and are more an indicator of developing wealth of a country. It will be useful to investigate whether simply following the stock index results in long term profilts.
+4. Mutual Funds like Vanguard have delivered consistet returns by just following the stock market indexes, i.e. by actively not trying to beat the market.
 
 --- .class #id 
 
