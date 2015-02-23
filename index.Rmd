@@ -26,6 +26,7 @@ companies listed on BSE.
 2. In general, day to day movements are not predictable, or are too fast to be useful to most human traders.
 3. On the other hand, stock market long term movements can be predicted and are more an indicator of developing wealth of a country. It will be useful to investigate whether simply following the stock index results in long term profilts.
 4. Mutual Funds like Vanguard have delivered consistet returns by just following the stock market indexes, i.e. by actively not trying to beat the market.
+
 --- .class #id 
 
 ## Dataset
